@@ -123,7 +123,9 @@ margin-top: 20px;
     text-decoration: line-through;
 }
 .todo_item.delition{
-    animation: opacity 1s;
+    background-color: mediumvioletred;
+    animation-duration: 1s;
+    animation-name: slideout;
 }
 .todo_item.favorite{
     background-color: indianred;
@@ -168,6 +170,17 @@ margin-top: 20px;
 
 }
 @keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+@keyframes slideout {
     from {
         margin-left: 100%;
         width: 300%;
