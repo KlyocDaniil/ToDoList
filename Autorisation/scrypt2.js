@@ -11,7 +11,7 @@ function checkauto() {
     if (log.value != '' && pass.value != '') {
         if (true_log === log.value && true_pass=== pass.value) {
             alert("Успешная авторизация")
-window.location.href = 'todolist.html'
+window.location.href = 'C:\\Users\\Daniil\\Рабочий стол\\qqexd\\ToDoListJs\\ToDoList\\todolist.html'
         }
         else
         {

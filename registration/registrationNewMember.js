@@ -29,7 +29,7 @@ function check_reg(){
         }
         if(registrationSuccess === true){
             alert("Регистрация прошла успешно")
-            window.location.href = 'index.html'
+            window.location.href = 'C:\\Users\\Daniil\\Рабочий стол\\qqexd\\ToDoListJs\\Autorisation\\index.html'
         }
 
     }
