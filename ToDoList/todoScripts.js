@@ -1,6 +1,7 @@
 const addTask = document.getElementById("addTask");
 const infoAboutTask = document.getElementById("textTask");
 const tasksAll = document.getElementById("AllTasks");
+const delAllCompTask = document.getElementById('deleteAllTask')
 // function but_click()
 // {
 //     Task()
@@ -27,7 +28,7 @@ const createTeamplate = (task,index) => {
                      <div class ="buttons">
                             <input onclick="completeTask(${index})" 
                             class="btn-complete" type="checkbox" ${task.completed ?'checked' : ''}> 
-                             <button onclick="deleteTask(${index})" class="btn-delete">Delete</button>
+                             <button onclick="deleteTask(${index})" class="btn-delete">Удалить задачу</button>
                      </div>
                 </div>
     ` //динамические скобки,
@@ -63,8 +64,8 @@ function updateLocalStorage  ()  {
 //при клике на кнопку добавить задачу отправляем в массив тасков
 addTask.addEventListener('click', ()=>{
 tasks.push(new Task(infoAboutTask.value)) // отправление в таскс
-    updateLocalStorage();
-    fillHtmlList();
+    updateLocalStorage()
+    fillHtmlList()
     infoAboutTask.value = ''
 })
 
