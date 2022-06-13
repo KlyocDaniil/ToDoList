@@ -123,6 +123,7 @@ margin-top: 20px;
     opacity: 0.5;
     text-decoration: line-through;
 }
+/*ДОДЕЛАТЬ*/
 .todo_item.delition{
     background-color: mediumvioletred;
     animation-duration: 1s;
