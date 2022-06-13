@@ -28,8 +28,9 @@ const createTeamplate = (task,index) => {
                     <div id = "fillColors" class ="descriptionTask"> ${task.description}</div>
                      <div class ="buttons">
                      <!--Избранная задача-->
-                     ★
+                     <h4>★</h4>  
                             <input onclick = "setFavoriteTask(${index})" class = "btn-favorite" type = "button" ${task.favorite ? 'favorite' : ''}>
+                            <h4>✓</h4> 
                             <!--Выполненая задача-->
                              <input onclick="completeTask(${index})"  class="btn-complete" type="checkbox" ${task.completed ?'checked' : ''}> 
                              <!--Удаление задачи-->
@@ -76,6 +77,7 @@ tasks.push(new Task(infoAboutTask.value)) // отправление в таск�
     fillHtmlList()
     infoAboutTask.value = ''
 })
+//Добавление в избранное
 const setFavoriteTask = index =>{
     tasks[index].favorite = !tasks[index].favorite
     if(tasks[index].favorite){

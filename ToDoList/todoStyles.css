@@ -116,6 +116,7 @@ margin-top: 20px;
     background-color: cadetblue;
     /*background-color: cadetblue;*/
     font-size: 24px;
+
 }
 .todo_item.checked{
     background-color: cadetblue;
@@ -129,8 +130,8 @@ margin-top: 20px;
 }
 .todo_item.favorite{
     background-color: indianred;
-    animation-duration: 1s;
-    animation-name: slidein;
+    animation-duration: 2s;
+
 }
 .buttons{
     display: flex;
@@ -139,10 +140,17 @@ margin-top: 20px;
     /*border: 1px blanchedalmond solid;*/
 
 }
+.buttons h4 {
+   display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+
+}
 .btn-favorite{
     width: 2em;
     height: 2em;
     margin-right: 10px;
+
 }
 .btn-complete{
     width: 2em;
@@ -162,32 +170,11 @@ margin-top: 20px;
 }
 @keyframes opacity {
     from {
-        opacity: 1;
-    }
-    to {
         opacity: 0;
     }
-
-}
-@keyframes slidein {
-    from {
-        margin-left: 100%;
-        width: 300%;
-    }
-
     to {
-        margin-left: 0;
-        width: 100%;
-    }
-}
-@keyframes slideout {
-    from {
-        margin-left: 100%;
-        width: 300%;
+        opacity: 1;
     }
 
-    to {
-        margin-left: 0;
-        width: 100%;
-    }
 }
+
