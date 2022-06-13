@@ -1,7 +1,7 @@
 const addTask = document.getElementById("addTask");
 const infoAboutTask = document.getElementById("textTask");
 const tasksAll = document.getElementById("AllTasks");
-const delAllCompTask = document.getElementById('deleteAllTask')
+
 // function but_click()
 // {
 //     Task()
@@ -18,26 +18,34 @@ let todoItemElements = []
 function Task(description){
     this.description = description
     this.completed = false
+    this.favorite = false
 }
 
 
 const createTeamplate = (task,index) => {
     return ` 
-    <div id = "fillColor" class = "todo_item ${task.completed ? 'checked' : ''}">
+    <div id = "fillColor" class = "todo_item ${task.completed ? 'checked' : ''} ${task.favorite ? 'favorite': ''}">
                     <div id = "fillColors" class ="descriptionTask"> ${task.description}</div>
                      <div class ="buttons">
-                            <input onclick="completeTask(${index})" 
-                            class="btn-complete" type="checkbox" ${task.completed ?'checked' : ''}> 
+                     <!--Избранная задача-->
+                     ★
+                            <input onclick = "setFavoriteTask(${index})" class = "btn-favorite" type = "checkbox" ${task.favorite ? 'favorite' : ''}>
+                            <!--Выполненая задача-->
+                             <input onclick="completeTask(${index})"  class="btn-complete" type="checkbox" ${task.completed ?'checked' : ''}> 
+                             <!--Удаление задачи-->
                              <button onclick="deleteTask(${index})" class="btn-delete">Удалить задачу</button>
                      </div>
                 </div>
     ` //динамические скобки,
 }
 const filterTasks =()=>{
-    const activeTasks = tasks.length && tasks.filter(item => item.completed === false)
-    const completedTasks = tasks.length && tasks.filter(item => item.completed === true)
-    tasks = [...activeTasks,...completedTasks]
+    const favoriteTasks = tasks.length && tasks.filter(item=>item.favorite === true)
+    const activeTasks = tasks.length && tasks.filter(item => item.completed === false && item.favorite === false)
+    const completedTasks = tasks.length && tasks.filter(item => item.completed === true && item.favorite === false)
+    // const unFavoriteTasks = tasks.length && tasks.filter(item => item.favorite === false)
+    tasks = [...favoriteTasks,...activeTasks,...completedTasks]
 }
+
 
 //----------HowItWorks?-----------------
 //занялем предыдущее знаение
@@ -68,7 +76,18 @@ tasks.push(new Task(infoAboutTask.value)) // отправление в таск�
     fillHtmlList()
     infoAboutTask.value = ''
 })
-
+const setFavoriteTask = index =>{
+    tasks[index].favorite = !tasks[index].favorite
+    if(tasks[index].favorite){
+        todoItemElements[index].classList.add('favorite')
+    }
+    else
+    {
+        todoItemElements[index].classList.remove('favorite')
+    }
+    updateLocalStorage()
+     fillHtmlList()
+}
 // клик на таск
 const completeTask = index => {
     tasks[index].completed = !tasks[index].completed
