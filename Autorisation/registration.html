@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="registrationStyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="copcont">
+    <form id = "reg_sc" class = "registration" method="post">
+        <div class="text_upper_then_registration">
+<h1>Регистрация нового пользователя</h1>
+<h2>Чтобы начать пользоваться ToDoList, необходимо зарегестрироваться</h2>
+        </div>
+        <div class ="dvigat">
+        <div class = "enterLogPassEmailTel">
+
+         <p style="margin-left: 40%;font-family: 'Montserrat', sans-serif ;
+    font-weight: bold;">Ваш будущий логин</p>
+        <p><input required id = "regLogin"     placeholder="Введите логин"
+        type="text" class = "regLog"></p>
+
+
+        <p style="margin-left: 40% ;font-family: 'Montserrat', sans-serif ;
+    font-weight: bold;">Ваш будущий пароль</p>
+        <p><input required id = "regPassword"  placeholder="Введите пароль" type="password" class = "regPass"> </p>
+            <p style="margin-left: 40%; font-family: 'Montserrat', sans-serif ;
+    font-weight: bold;">Email</p>
+        <p><input required id = "regEmail"  placeholder="Введите email" type="email"  class = "regEmail"> </p>
+
+
+    </div>
+
+<button onclick="but_reg_click()" id="regButAccept" class = "button_reg" type="submit">Зарегестрироваться</button>
+        <a class="back_to_main_from_reg" href="index.html">На главную</a>
+        </div>
+    </form>
+</div>
+<script src = "registrationNewMember.js"></script>
+</body>
+</html>

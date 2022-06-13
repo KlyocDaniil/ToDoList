@@ -1,0 +1,64 @@
+.copcont{
+    width: 100%;
+    max-width: 1090px;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex; // learn
+}
+.registration{
+    background-color: wheat;
+    border-radius: 50px;
+    margin: auto;
+}
+.text_upper_then_registration {
+    font-family: 'Montserrat', sans-serif ;
+    font-weight: bolder;
+    margin: 0 50px;
+}
+.enterLogPassEmailTel{
+margin-left: 20px;
+
+}
+.back_to_main_from_reg{
+    margin-left: 200px;
+    font-family: 'Montserrat', sans-serif ;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+.regLog{
+    height: 30px;
+    margin-left: 40%;
+    border-radius: 10px;
+    text-decoration: none;
+    border-width: 1px;
+}
+.regPass{
+    height: 30px;
+    margin-left: 40%;
+    border-radius: 10px;
+    border-width: 1px;
+}
+.regEmail
+{
+    height: 30px;
+    margin-left: 40%;
+    border-radius: 10px;
+    border-width: 1px;
+}
+.button_reg{
+    margin-left: 394px;
+    margin-top: 20px;
+    height: 30px;
+    width: 176px;
+    border-radius: 10px;
+    /*border-width: 1px;*/
+    border: none;
+    font-family: 'Montserrat', sans-serif ;
+    font-weight: bold;
+    box-shadow: 10px 6px 2px 1px rgba(0, 0, 255, .2);
+}
+
+.dvigat{
+    margin: 20px 0;
+}

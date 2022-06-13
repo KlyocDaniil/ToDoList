@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My ToDo</title>
+    <link rel="stylesheet" href="todoStyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="todo">
+    <div class = "menu">
+        <h1><a class="logo" href="index.html">To Do List</a></h1>
+    </div>
+    <form id = "checkTodoForm" class = "ToDoList"  action="todolist.html">
+
+        <div class = "todo_input">
+    <input class = "todo_text" type="text" id="textTask">
+    <span class = "todo_add"></span>
+            <button class="button_to_add_task" id ="addTask">Добавить задачу</button>
+            <button onclick="deleteAllTask()" class = "button_to_delete_ALL_tasks" id = "deleteAllTask">Удалить все задачи</button>
+</div>
+
+    <select class = "todo_options">
+        <option >Активные задачи</option>
+        <option value = "active">Завершённые задачи</option>
+        <option value = "active">Избранные задачи</option>
+    </select>
+        <div class = "viewTasks">
+            <h2>Задачи на день</h2>
+            <div class = "tasks" id="AllTasks">
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </form>
+
+</div>
+
+
+<script src ="todoScripts.js"></script>
+</body>
+</html>

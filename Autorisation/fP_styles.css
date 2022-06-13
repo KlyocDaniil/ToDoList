@@ -1,0 +1,46 @@
+.copcont{
+    width: 100%;
+    max-width: 1090px;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex; // learn
+}
+.forgotPassword {
+    margin: auto;
+    background-color: wheat;
+    border-radius: 20px;
+    width: 50%;
+    height: 40%;
+}
+
+.newPass {
+    margin-left: 70px;
+    border-radius: 5px;
+    height: 20px;
+}
+.confnewPass {
+    margin-left: 70px;
+    border-radius: 5px;
+    height: 20px;
+}
+.button_confPass {
+    margin-left: 70px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif ;
+    font-weight: bold;
+}
+.text_upper_then_pass {
+    margin-left: 50px;
+    font-family: 'Montserrat', sans-serif ;
+    margin-top: 70px;
+    font-weight: bolder;
+    font-size: large;
+}
+.back_to_main{
+    margin-left: 10px;
+    font-family: 'Montserrat', sans-serif ;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+

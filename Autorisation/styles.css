@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.copcont{
+    width: 100%;
+    max-width: 1090px;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex; // learn
+
+}
+
+.login{
+    margin-top: 20px;
+    margin-left: 170px;
+    font-family: 'Montserrat', sans-serif ;
+    font-weight: bolder;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+.password {
+    margin-top: 20px;
+    margin-left: 170px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif ;
+    font-weight: bolder;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+.autoriaztion{
+margin: auto;
+    background: cornflowerblue;
+    padding: 20px;
+    border-radius: 10px 50px ;
+}
+.signUp{
+    color: black;
+    text-decoration: none;
+    margin: 0px 5px;
+    font-family: 'Montserrat', sans-serif ;
+    font-weight: bold;
+    padding: 0 50px;
+}
+.signIn:hover{
+    /*При наведедении на элемент класса*/
+    color: red;
+
+
+}
+.signIn{
+    transition: background-color 1s ease;
+    /*animation*/
+    font-family: 'Montserrat', sans-serif ;
+    font-weight: bolder;
+
+}
+.text_upper_then_login{
+    font-family: 'Montserrat', sans-serif ;
+    font-weight: bold;
+}

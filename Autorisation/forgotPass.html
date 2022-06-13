@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="fP_styles.css">
+    <title>Восстановление пароля</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class = "copcont">
+    <form  id = "checkform" class="forgotPassword" action="forgotPass.html" method="post">
+<div class = "text_upper_then_pass">
+    <h1>Восстановление пароля</h1>
+    <h3>Придумайте новый пароль</h3>
+</div>
+
+        <p> <input id = "funcNewPass" class = "newPass" placeholder="Новый пароль" type="password">  </p>
+
+    <p><input id = "funcConfNewPass" class = "confnewPass" placeholder="Повторите новый пароль" type="password"></p>
+
+        <button  onclick="but_click()" id = "buttonAccept" class = "button_confPass" type="submit">Подтвердить</button>
+
+        <a class="back_to_main" href="index.html">На главную </a>
+    </form>
+</div>
+<script src="forgotPassHtmlscripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.todo{
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    background-color: lightblue;
+    overflow: hidden;
+}
+.ToDoList{
+    height: max-content;
+    margin: 20px auto;
+    background-color: cadetblue;
+    border-radius: 20px;
+    width: max-content;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: row;
+
+}
+.menu{
+
+    padding: 0;
+margin-top: 20px;
+    width: 100px;
+}
+.logo{
+    margin-left: 10px;
+    width: 100px;
+        text-align: center;
+    font-size: 50px;
+    border-radius: 10px;
+    background-color:dodgerblue;
+    color: wheat;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif ;
+    font-weight: bold;
+    display: block;
+    position: absolute;
+}
+
+.todo_text{
+    width: 500px;
+    padding: 2px;
+    height: 100px;
+    border-radius: 100px;
+    border: none;
+}
+.todo_input{
+
+    border-radius: 10px;
+
+}
+.todo_options{
+    font-family: 'Montserrat', sans-serif ;
+
+    background-color: blanchedalmond;
+    border-radius: 20px;
+    height: max-content;
+    padding: 2px;
+    margin: 47px 10px;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.todo_add{
+    border-radius: 10px;
+}
+.button_to_add_task{
+    margin: auto 10px;
+    width: 100px;
+    border-radius: 100px;
+    border: none;
+    font-family: 'Montserrat', sans-serif ;
+    font-weight: 900;
+}
+.button_to_delete_ALL_tasks{
+    margin: auto 10px;
+    width: 100px;
+    border-radius: 100px;
+    border: none;
+    font-family: 'Montserrat', sans-serif ;
+    font-weight: 900;
+}
+.viewTasks{
+    background-color:honeydew;
+    border-radius: 10px;
+    width: 1000px;
+    height: max-content;
+    position: absolute;
+    margin: 200px 0;
+    left: 520px;
+    font-family: 'Montserrat', sans-serif ;
+    font-size: 36px;
+    font-weight: 900;
+}
+.tasks{
+    /*background-color: #ff92b2;*/
+    font-family: 'Montserrat', sans-serif ;
+    font-weight: bolder;
+    font-size: large;
+}
+.tasks.delAllTasks{
+    background-color: blueviolet;
+}
+.todo_item{
+    padding: 10px;
+    margin: 10px auto;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    background-color: cadetblue;
+    /*background-color: cadetblue;*/
+    font-size: 24px;
+}
+.todo_item.checked{
+    background-color: cadetblue;
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+.todo_item.delition{
+    animation: opacity 1s ease-in-out;
+}
+@keyframes opacity {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+
+}
