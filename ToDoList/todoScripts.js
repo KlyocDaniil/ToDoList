@@ -42,11 +42,12 @@ const createTeamplate = (task,index) => {
     ` //динамические скобки,
 }
 const filterTasks =()=>{
-    const favoriteTasks = tasks.length && tasks.filter(item=>item.favorite === true)
+    const favoriteTasks = tasks.length && tasks.filter(item=>item.favorite === true && item.completed === false)
     const activeTasks = tasks.length && tasks.filter(item => item.completed === false && item.favorite === false)
     const completedTasks = tasks.length && tasks.filter(item => item.completed === true && item.favorite === false)
+    const complAndFavorite = tasks.length && tasks.filter(item =>item.favorite === true && item.completed === true)
     // const unFavoriteTasks = tasks.length && tasks.filter(item => item.favorite === false)
-    tasks = [...favoriteTasks,...activeTasks,...completedTasks]
+    tasks = [...favoriteTasks,...activeTasks,...completedTasks,...complAndFavorite]
 }
 
 
