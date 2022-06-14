@@ -15,6 +15,7 @@ let tasks;
 // все дивы с классом Алл Таскс, для дин добавления таска
 let todoItemElements = []
 
+
 function Task(description){
     this.description = description
     this.completed = false
@@ -25,18 +26,19 @@ function Task(description){
 const createTeamplate = (task,index) => {
     return ` 
     <div id = "fillColor" class = "todo_item ${task.completed ? 'checked' : ''} ${task.favorite ? 'favorite': ''}">
-                    <div id = "fillColors" class ="descriptionTask"> ${task.description}</div>
-                     <div class ="buttons">
-                     <!--Избранная задача-->
+         <div id = "AlreadyDoneTask" class ="descriptionTask"> ${task.description}</div>
+            <div class ="buttons">
+                    
                      <h4>★</h4>  
-                            <input onclick = "setFavoriteTask(${index})" class = "btn-favorite" type = "button" ${task.favorite ? 'favorite' : ''}>
-                            <h4>✓</h4> 
+                            <!--Избранная задача-->
+               <input onclick = "setFavoriteTask(${index})" class = "btn-favorite" type = "checkbox" ${task.favorite ? 'checked' : ''}>
+                     <h4>✓</h4> 
                             <!--Выполненая задача-->
-                             <input onclick="completeTask(${index})"  class="btn-complete" type="checkbox" ${task.completed ?'checked' : ''}> 
-                             <!--Удаление задачи-->
-                             <button onclick="deleteTask(${index})" class="btn-delete">Удалить задачу</button>
-                     </div>
-                </div>
+               <input onclick="completeTask(${index})"  class="btn-complete" type="checkbox" ${task.completed ?'checked' : ''}> 
+                            <!--Удаление задачи-->
+               <button onclick="deleteTask(${index})" class="btn-delete">Удалить задачу</button>
+             </div>
+          </div>
     ` //динамические скобки,
 }
 const filterTasks =()=>{
@@ -90,7 +92,8 @@ const setFavoriteTask = index =>{
     updateLocalStorage()
      fillHtmlList()
 }
-// клик на таск
+
+// Задача выполнена
 const completeTask = index => {
     tasks[index].completed = !tasks[index].completed
     if(tasks[index].completed) {
