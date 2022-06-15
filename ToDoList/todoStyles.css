@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: column;
     background-color: lightblue;
-    overflow: hidden;
+    overflow: scroll;
 }
 .ToDoList{
     height: max-content;
@@ -97,6 +97,7 @@ margin-top: 20px;
     font-family: 'Montserrat', sans-serif ;
     font-size: 36px;
     font-weight: 900;
+
 }
 .tasks{
     /*background-color: #ff92b2;*/
