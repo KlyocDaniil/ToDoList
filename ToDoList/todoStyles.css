@@ -47,7 +47,7 @@ margin-top: 20px;
 .todo_text{
     width: 500px;
     padding: 2px;
-    height: 100px;
+    height: 60px;
     border-radius: 100px;
     border: none;
 }
@@ -97,6 +97,7 @@ margin-top: 20px;
     font-family: 'Montserrat', sans-serif ;
     font-size: 36px;
     font-weight: 900;
+    padding: 20px 100px 20px;
 
 }
 .tasks{

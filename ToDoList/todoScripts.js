@@ -26,7 +26,9 @@ function Task(description){
 const createTeamplate = (task,index) => {
     return ` 
     <div id = "fillColor" class = "todo_item ${task.completed ? 'checked' : ''} ${task.favorite ? 'favorite': ''}">
+    
          <div id = "AlreadyDoneTask" class ="descriptionTask"> ${task.description}</div>
+         
             <div class ="buttons">
                     
                      <h4>★</h4>  
