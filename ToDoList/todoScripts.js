@@ -11,7 +11,7 @@ const tasksAll = document.getElementById("AllTasks");
 
 
 let tasks;
-!localStorage.tasks ? tasks = [] : tasks = JSON.parse(localStorage.getItem('tasks')) //Если есть что-то в локал стораге отправляем в массив таскс
+!localStorage.tasks ? tasks = [] : tasks = JSON.parse(localStorage.getItem('tasks')) //Если есть что-то в локал стораге отправляем в массив таскс(отправляем объект)
 // все дивы с классом Алл Таскс, для дин добавления таска
 let todoItemElements = []
 
