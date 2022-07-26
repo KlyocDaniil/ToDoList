@@ -11,6 +11,8 @@ const tasksAll = document.getElementById("AllTasks");
 
 
 let tasks;
+//Если в метод getItem() интерфейса Storage передать ключ в качестве параметра,
+// то метод вернёт значение, лежащее в хранилище по указанному ключу.
 !localStorage.tasks ? tasks = [] : tasks = JSON.parse(localStorage.getItem('tasks')) //Если есть что-то в локал стораге отправляем в массив таскс(отправляем объект)
 // все дивы с классом Алл Таскс, для дин добавления таска
 let todoItemElements = []
@@ -70,6 +72,9 @@ tasksAll.innerHTML = "" //сделал пустым
 }
 fillHtmlList();
 //заполнение локал сторэджа
+//Если методу setItem() интерфейса Storage передать ключ и значение,
+// то в хранилище будет добавлено соответствующее ключу значение, 
+//либо, если запись уже есть в хранилище, то значение по ключу будет обновлено.
 function updateLocalStorage  ()  {
     localStorage.setItem('tasks',JSON.stringify(tasks))
 }
